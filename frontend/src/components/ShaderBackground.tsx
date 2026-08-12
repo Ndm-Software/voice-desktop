@@ -1,23 +1,30 @@
 import { useEffect, useRef } from "react";
 
 function ShaderBackground() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvasElement = canvasRef.current;
 
-    const gl =
-      canvas.getContext("webgl") ||
-      canvas.getContext("experimental-webgl");
+    if (!canvasElement) {
+      return;
+    }
 
-    if (!gl) {
+    const glContext =
+      canvasElement.getContext("webgl") ||
+      canvasElement.getContext("experimental-webgl");
+
+    if (!glContext) {
       console.error("WebGL desteklenmiyor.");
       return;
     }
 
-    let animationFrameId;
-    let resizeObserver;
+    const canvas: HTMLCanvasElement = canvasElement;
+    const gl: WebGLRenderingContext =
+      glContext as WebGLRenderingContext;
+
+    let animationFrameId: number;
+    let resizeObserver: ResizeObserver | null = null;
 
     // =========================
     // VERTEX SHADER
@@ -140,8 +147,15 @@ function ShaderBackground() {
     // SHADER OLUŞTUR
     // =========================
 
-    function createShader(type, source) {
+    function createShader(
+      type: GLenum,
+      source: string
+    ): WebGLShader | null {
       const shader = gl.createShader(type);
+
+      if (!shader) {
+        return null;
+      }
 
       gl.shaderSource(shader, source);
       gl.compileShader(shader);
@@ -175,6 +189,10 @@ function ShaderBackground() {
 
     const program = gl.createProgram();
 
+    if (!program) {
+      return;
+    }
+
     gl.attachShader(program, vertexShader);
     gl.attachShader(program, fragmentShader);
 
@@ -182,6 +200,7 @@ function ShaderBackground() {
 
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
       console.error(gl.getProgramInfoLog(program));
+      gl.deleteProgram(program);
       return;
     }
 
@@ -192,6 +211,10 @@ function ShaderBackground() {
     // =========================
 
     const buffer = gl.createBuffer();
+
+    if (!buffer) {
+      return;
+    }
 
     gl.bindBuffer(
       gl.ARRAY_BUFFER,
@@ -255,7 +278,9 @@ function ShaderBackground() {
       const width = canvas.clientWidth;
       const height = canvas.clientHeight;
 
-      if (!width || !height) return;
+      if (!width || !height) {
+        return;
+      }
 
       const dpr = Math.min(
         window.devicePixelRatio || 1,
@@ -295,7 +320,7 @@ function ShaderBackground() {
     // ANIMATION
     // =========================
 
-    function render(time) {
+    function render(time: number) {
       gl.useProgram(program);
 
       // Biraz daha hızlı animasyon
