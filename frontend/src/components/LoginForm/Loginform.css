@@ -1,0 +1,115 @@
+.login-card {
+    width: 390px;
+    max-width: 100%;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 34px 34px 32px;
+    box-shadow:
+      0 15px 45px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .login-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 7px;
+    text-align: center;
+  }
+  
+  .login-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    margin: 8px 0 34px;
+  }
+  
+  .login-card > label {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .password-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+  }
+  
+  .password-row label {
+    margin: 0;
+  }
+  
+  .password-row a {
+    color: #0b6e5b;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  input {
+    width: 100%;
+    height: 54px;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 0 18px;
+    font-size: 14px;
+    color: #1f2937;
+    outline: none;
+    margin-bottom: 22px;
+    background: #ffffff;
+    transition: 0.2s;
+  }
+  
+  input::placeholder {
+    color: #b4bcc8;
+  }
+  
+  input:focus {
+    border-color: #0b6e5b;
+    box-shadow:
+      0 0 0 3px rgba(11, 110, 91, 0.10);
+  }
+  
+  .login-btn {
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 28px;
+    background: #0b6e5b;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 8px 0 27px;
+    transition: 0.2s;
+  }
+  
+  .login-btn:hover {
+    background: #095c4c;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 26px;
+  }
+  
+  .divider span {
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+  }
+  
+  .divider p {
+    margin: 0 13px;
+    color: #9ca3af;
+    font-size: 12px;
+  }

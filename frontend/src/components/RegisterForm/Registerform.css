@@ -1,0 +1,281 @@
+/* =========================
+   REGISTER WRAPPER
+========================= */
+
+.register-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  /* =========================
+     REGISTER CARD
+  ========================= */
+  
+  .register-card {
+    width: 405px;
+    padding: 30px 32px 28px;
+  
+    background: #ffffff;
+  
+    border-radius: 22px;
+  
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.06);
+  
+    display: flex;
+    flex-direction: column;
+  
+    box-sizing: border-box;
+  }
+  
+  
+  /* =========================
+     TITLE
+  ========================= */
+  
+  .register-card .login-title {
+    font-size: 25px;
+    font-weight: 700;
+  
+    color: #1f2937;
+  
+    margin-bottom: 8px;
+  
+    text-align: center;
+  }
+  
+  
+  /* =========================
+     SUBTITLE
+  ========================= */
+  
+  .register-card .login-subtitle {
+    font-size: 14px;
+  
+    color: #6b7280;
+  
+    text-align: center;
+  
+    margin: 8px 0 24px;
+  }
+  
+  
+  /* =========================
+     LABEL
+  ========================= */
+  
+  .register-card label {
+    display: block;
+  
+    font-size: 12px;
+  
+    font-weight: 700;
+  
+    color: #4b5563;
+  
+    margin-bottom: 7px;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  /* =========================
+     INPUT
+  ========================= */
+  
+  .register-card input {
+    width: 100%;
+  
+    height: 54px;
+  
+    border: 1px solid #e5e7eb;
+  
+    border-radius: 15px;
+  
+    padding: 0 18px;
+  
+    font-size: 14px;
+  
+    color: #1f2937;
+  
+    outline: none;
+  
+    margin-bottom: 17px;
+  
+    background: #ffffff;
+  
+    transition: 0.2s;
+  
+    box-sizing: border-box;
+  }
+  
+  
+  .register-card input::placeholder {
+    color: #b4bcc8;
+  }
+  
+  
+  .register-card input:focus {
+    border-color: #0b6e5b;
+  
+    box-shadow:
+      0 0 0 3px rgba(11, 110, 91, 0.10);
+  }
+  
+  
+  /* =========================
+     REGISTER BUTTON
+  ========================= */
+  
+  .register-card .login-btn {
+    width: 100%;
+  
+    height: 56px;
+  
+    border: none;
+  
+    border-radius: 28px;
+  
+    background: #0b6e5b;
+  
+    color: white;
+  
+    font-size: 18px;
+  
+    font-weight: 700;
+  
+    cursor: pointer;
+  
+    margin: 2px 0 27px;
+  
+    transition: 0.2s;
+  }
+  
+  
+  .register-card .login-btn:hover {
+    background: #095c4c;
+  }
+  
+  
+  /* =========================
+     DIVIDER
+  ========================= */
+  
+  .register-card .divider {
+    display: flex;
+  
+    align-items: center;
+  
+    width: 100%;
+  
+    margin: 18px 0;
+  }
+  
+  
+  .register-card .divider span {
+    flex: 1;
+  
+    height: 1px;
+  
+    background: #e5e7eb;
+  }
+  
+  
+  .register-card .divider p {
+    margin: 0 13px;
+  
+    color: #9ca3af;
+  
+    font-size: 12px;
+  }
+  
+  
+  /* =========================
+     GOOGLE BUTTON
+  ========================= */
+  
+  .register-card .google-btn {
+    width: 100%;
+  }
+  
+  
+  /* =========================
+     REGISTER TEXT
+  ========================= */
+  
+  .register-wrapper > .register-text {
+    width: 405px;
+  
+    margin: 16px 0 0;
+  
+    padding: 0;
+  
+    text-align: center;
+  
+    position: static;
+  
+    font-size: 14px;
+  
+    line-height: 1.4;
+  
+    color: #6b7280;
+  }
+  
+  
+  .register-wrapper > .register-text a {
+    color: #0b6e5b;
+  
+    text-decoration: none;
+  
+    font-weight: 700;
+  }
+  
+  
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  
+  @media (max-width: 1000px) {
+    .register-wrapper {
+      width: 100%;
+      min-height: 700px;
+      height: auto;
+      padding: 50px 25px;
+  
+      box-sizing: border-box;
+    }
+  
+    .register-card {
+      width: 390px;
+      max-width: 100%;
+    }
+  
+    .register-wrapper > .register-text {
+      width: 390px;
+      max-width: 100%;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    .register-wrapper {
+      padding: 35px 20px;
+    }
+  
+    .register-card {
+      width: 100%;
+      padding: 30px 25px;
+    }
+  
+    .register-wrapper > .register-text {
+      width: 100%;
+    }
+  
+    .register-card .login-title {
+      font-size: 23px;
+    }
+  }

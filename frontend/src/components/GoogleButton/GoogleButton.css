@@ -1,0 +1,15 @@
+.google-btn {
+    width: 100%;
+    height: 54px;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }

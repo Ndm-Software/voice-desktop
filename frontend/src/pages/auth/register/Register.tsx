@@ -1,5 +1,5 @@
-import LeftPanel from "../../../components/LeftPanel";
-import RegisterForm from "../../../components/RegisterForm";
+import LeftPanel from "../../../components/LeftPanel/LeftPanel";
+import RegisterForm from "../../../components/RegisterForm/RegisterForm";
 
 function Register() {
   return (

@@ -1,4 +1,5 @@
-import google from "../assets/google.svg";
+import google from "../../assets/google.svg";
+import "./GoogleButton.css";
 
 function GoogleButton() {
   return (

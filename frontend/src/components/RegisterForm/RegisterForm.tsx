@@ -1,4 +1,5 @@
-import GoogleButton from "./GoogleButton";
+import GoogleButton from "../GoogleButton/GoogleButton";
+import "./RegisterForm.css";
 
 function RegisterForm() {
   return (

@@ -1,8 +1,9 @@
-import microphone from "../assets/microphone.svg";
-import reminder from "../assets/reminder.svg";
-import world from "../assets/world.svg";
-import lock from "../assets/lock.svg";
-import ShaderBackground from "./ShaderBackground";
+import microphone from "../../assets/microphone.svg";
+import reminder from "../../assets/reminder.svg";
+import world from "../../assets/world.svg";
+import lock from "../../assets/lock.svg";
+import ShaderBackground from "../ShaderBackground/ShaderBackground";
+import "./LeftPanel.css";
 
 function LeftPanel() {
   return (

@@ -1,4 +1,6 @@
+import "./ShaderBackground.css";
 import { useEffect, useRef } from "react";
+
 
 function ShaderBackground() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
