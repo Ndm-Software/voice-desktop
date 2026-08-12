@@ -145,8 +145,10 @@
     line-height: 1.5;
   }
   .description {
+    width: 430px;
+    max-width: 100%;
     font-size: 15px;
-    color: #6b7280;
-    line-height: 1.6;
-    margin-bottom: 24px;
-  }  
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 46px;
+  }
