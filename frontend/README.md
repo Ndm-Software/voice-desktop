@@ -1,16 +1,18 @@
-# React + Vite
+# frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Tailwind, Vite ile çalışıyor. Electron'un
+yüklediği arayüzün kendisi. Çalışma şekli için proje kökündeki
+`README.md`'ye bakılabilir.
 
-Currently, two official plugins are available:
+```
+src/
+  pages/auth/          Login, Register
+  components/          Login/Register bileşenleri + layout/ (Sidebar, TopBar — tüm ekranlarda ortak)
+  app/(dashboard)/      Panel, Takvim, Geçmiş, Profil ekranları
+  lib/, mocks/, services/, types/   Ekranlar arası paylaşılan kod
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev     # http://localhost:5173
+```

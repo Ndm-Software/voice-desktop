@@ -1,0 +1,14 @@
+/* Panel/Takvim/Geçmiş/Profil ekranlarının kullandığı Tailwind katmanı.
+   Login/Register'ın kendi index.css/App.css'ine hiç dokunulmadı — ikisi
+   yan yana çalışıyor, class isimleri çakışmıyor. */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
