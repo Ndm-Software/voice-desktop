@@ -1,24 +1,18 @@
 # Voia Desktop
 
-Voia'nın masaüstü uygulaması. `electron/` (pencereyi açan ana süreç) ve
-`frontend/` (React + TypeScript + Tailwind arayüz, Vite ile çalışıyor)
-olmak üzere iki ayrı paketten oluşuyor.
-
+`electron/` (Electron) + `frontend/` (React + TypeScript + Tailwind, Vite)
 
 ```bash
-# frontend/ içinde
+# frontend/
 npm install && npm run dev     # http://localhost:5173
 
-# electron/ içinde (frontend çalışırken)
+# electron/
 npm install && npm start
 ```
 
-Sadece arayüzü incelemek için Electron'a gerek yok — Vite sunucusu
-çalışırken `http://localhost:5173` bir tarayıcıda da açılabilir.
-
 ## Ekranlar
 
-`frontend/src/app/(dashboard)/` altında, her biri kendi klasöründe:
+`frontend/src/app/(dashboard)/`
 
 | Ekran | Route |
 |---|---|
@@ -27,4 +21,4 @@ Sadece arayüzü incelemek için Electron'a gerek yok — Vite sunucusu
 | Yeni Hatırlatıcı Oluştur | `/calendar/new` |
 | Geçmiş | `/history` |
 | Profil | `/profile` |
-
+| Sessiz Saatler | `/quiet-hours` |

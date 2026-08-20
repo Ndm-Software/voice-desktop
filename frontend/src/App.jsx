@@ -10,6 +10,7 @@ import CalendarPage from "./app/(dashboard)/calendar/page";
 import NewReminderPage from "./app/(dashboard)/calendar/new/page";
 import HistoryPage from "./app/(dashboard)/history/page";
 import ProfilePage from "./app/(dashboard)/profile/page";
+import QuietHoursPage from "./app/(dashboard)/quiet-hours/page";
 
 // Backend bağlandığında gerçek query/mutation'ları (reminders, history,
 // settings...) cache'lemek için kullanılacak.
@@ -21,9 +22,8 @@ const queryClient = new QueryClient({
 
 /**
  * Login/Register (Ayşe Sude'nin kodu) hiç değişmedi. Panel/Takvim/Yeni
- * Hatırlatıcı/Geçmiş/Profil (app/(dashboard)/...) eklendi, ortak bir
- * Sidebar+TopBar kabuğu (DashboardLayout) içinde. Sessiz Saatler henüz
- * yok — route'u da yok.
+ * Hatırlatıcı/Geçmiş/Profil/Sessiz Saatler (app/(dashboard)/...) eklendi,
+ * ortak bir Sidebar+TopBar kabuğu (DashboardLayout) içinde.
  *
  * Yeni bir dashboard ekranı eklerken: `app/(dashboard)/<ad>/` klasörü aç,
  * buraya import + <Route> ekle. Login/Register'a dokunma.
@@ -42,6 +42,7 @@ export default function App() {
             <Route path="/calendar/new" element={<NewReminderPage />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/quiet-hours" element={<QuietHoursPage />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/login" replace />} />

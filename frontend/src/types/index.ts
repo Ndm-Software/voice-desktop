@@ -92,3 +92,14 @@ export interface Device {
   lastActive: string
   isActive: boolean
 }
+
+/** NOT(backend): USER_SETTINGS.silent_start/silent_end tek bir aralık
+ *  tutuyor; bu ekran (US-009, web'in gerçek kodu) GÜN BAŞINA ayrı
+ *  aralık istiyor — backend şemasında henüz karşılığı yok, ayrı bir
+ *  tablo/sütun gerekebilir. Backend'e sorulması gereken açık bir konu. */
+export interface QuietHoursDay {
+  day: string
+  enabled: boolean
+  startTime: string
+  endTime: string
+}

@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { to: '/panel', label: 'Panel', icon: LayoutDashboard },
   { to: '/calendar', label: 'Takvim', icon: CalendarDays },
   { to: '/history', label: 'Geçmiş', icon: History },
-  { to: '/quiet-hours', label: 'Sessiz Saatler', icon: BellOff, disabled: true },
+  { to: '/quiet-hours', label: 'Sessiz Saatler', icon: BellOff },
   { to: '/profile', label: 'Profil', icon: UserRound }
 ]
 

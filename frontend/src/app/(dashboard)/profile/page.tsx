@@ -52,6 +52,19 @@ export default function Page(): JSX.Element {
     setTimeout(() => setToast(false), 3000)
   }
 
+  // "İptal Et" — hiç bağlı değildi, eklendi. Backend yok, "en son kaydedilen
+  // hâl" diye bir şey de yok; şimdilik alanları mock veriye (ilk açılış
+  // değerlerine) geri döndürüyor.
+  function handleCancel(): void {
+    setFullName(`${mockUser.firstName} ${mockUser.lastName}`)
+    setEmail(mockUser.email)
+    setPhone(mockUser.phoneNumber)
+    setAvatarSrc(mockUser.avatarUrl ?? null)
+    setLanguage(mockUserSettings.languageId)
+    setPushDefault(String(mockUserSettings.defaultPushBefore))
+    setCallDefault(String(mockUserSettings.defaultCallBefore))
+  }
+
   return (
     <div className="mx-auto max-w-4xl">
       <header className="mb-lg">
@@ -203,6 +216,7 @@ export default function Page(): JSX.Element {
         <div className="flex items-center justify-end gap-md pt-md">
           <button
             type="button"
+            onClick={handleCancel}
             className="rounded-lg px-lg py-sm font-body-md text-body-md text-on-surface transition-colors hover:bg-surface-container"
           >
             İptal Et
